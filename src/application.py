@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 import getpass
 import os
 import subprocess
@@ -140,7 +141,7 @@ def main():
             os.chdir(base_directory)
         except InvalidGitRepositoryError:
             logging.error("InvalidGitRepositoryError raised for repo {repo}, skipping...".format(repo=repo))
-            pass
+            continue
     logging.warning("Total scanned repo count = {repo_count}".format(repo_count=scanned_repo_count))
 
 
